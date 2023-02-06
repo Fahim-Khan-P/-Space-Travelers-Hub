@@ -1,19 +1,47 @@
-import logo from '../assets/logo.png'
+import { NavLink } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
-const Navigation = () => {
-  return (
-    <nav className='navigation'>
-      <div className='logoDiv'>
+const Navigation = () => (
+  <nav className="navigation">
+    <div className="logoDiv">
       <img src={logo} alt="logo..." className="logoImage" />
-      <h2 className='logoText'>Space Travelers' Hub</h2>
-      </div>
-      <ul className='NavUl'>
-        <li className='navList'>Rockets</li>
-        <li className='navList'>Messions</li>
-        <li className='navList'>|   My Profile</li>
-      </ul>
-    </nav>
-  );
-}
+      <h2 className="logoText">Space Travelers&apos; Hub</h2>
+    </div>
+    <ul className="NavUl">
+      <li className="navList">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'active' : 'deActive')}
+        />
+      </li>
+      <li className="navList">
+        <NavLink
+          to="rockets"
+          className={({ isActive }) => (isActive ? 'active' : 'deActive')}
+        >
+          Rockets
+        </NavLink>
+      </li>
+
+      <li className="navList">
+        <NavLink
+          to="missions"
+          end
+          className={({ isActive }) => (isActive ? 'active' : 'deActive')}
+        >
+          Missions
+        </NavLink>
+      </li>
+      <li className="navList">
+        <NavLink
+          to="my-profile"
+          className={({ isActive }) => (isActive ? 'active' : 'deActive')}
+        >
+          | My Profile
+        </NavLink>
+      </li>
+    </ul>
+  </nav>
+);
 
 export default Navigation;
