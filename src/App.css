@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.logoDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-left: 24px;
+  align-items: center;
+}
+
+.logoImage {
+  width: 40px;
+  height: 50px;
+}
+
+.NavUl {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-right: 24px;
+}
+
+.navList {
+  list-style-type: none;
+  font-size: 22px;
+  color: blue;
+  cursor: pointer;
+}
